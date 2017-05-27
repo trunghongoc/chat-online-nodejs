@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="icon/png/1f60d.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">    
+    <link rel="stylesheet" href="css/style.css">
+    <!--icon-->
+	<link rel="stylesheet" href="dist/emojionearea.min.css">
+	<script src="dist/emojionearea.js"></script>
+	<!--/icon-->
+    <script src="https://chat-ahi.herokuapp.com/socket.io/socket.io.js"></script>
+    
+</head>
+<body>
+<!--đăng nhập-->
+    <div class="login-card" >
+        <h1><i class="fa fa-comments-o" aria-hidden="true"></i> &nbsp;Log-in</h1><br>
+        <div>
+            <input type="text" id="user" placeholder="Username">
+            <input type="submit" name="login" class="login login-submit" value="login">
+        </div>
+        
+        <div class="login-help">
+            <a href="#">Ahihi</a> • <a href="#">đồ ngốkc</a>
+        </div>
+    </div>
+<!--/đăng nhập-->
+
+
+<!--nội dung trang chủ-->
+<div class="trangchu" >
+    <!--menu-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa fa-weixin" aria-hidden="true"></i> &nbsp;Chat Ahihi</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"  style='color:#3498db;'></span> <span class="username"></span></a></li>
+                    <li><a href="#"><span class="fa fa-plane dangxuat"></span> &nbsp;Đăng xuất</a></li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+    <!--menu-->
+    <div class="container">
+        <div class="row">
+            <!--danh sách online-->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-success" style="background: #bdc3c7;"><h4 style="color:#000;;"><span class="fa fa-users"></span> &nbsp; Danh sách online</h4></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/danh sách online-->
+
+            <!--nội dung chat-->
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="text-center" style="color:#f39c12;">
+                            <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
+                            <span class="chatvoi">Bắt đầu trò chuyện</span>
+                        </span>
+                    </div>
+
+                    <div class="panel-body" id="list_tinnhan">
+
+                    </div>
+                    <div class="panel-footer">
+                        <input type="text" id="mess" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <!--/nội dung chat-->
+        </div>
+    </div>
+</div>
+<!--/nội dung trang chủ-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thông Báo</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>   
+    </div>
+</div>
+<!-- /Modal -->
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "chatonline",
+  "version": "1.0.0",
+  "description": "chat online upl lên h��eroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trung Ho Ngoc",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "socket.io": "^2.0.1"
+  }
+}
